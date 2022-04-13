@@ -3,52 +3,14 @@
 @section('content')
 
 <section id="feature_slider" class="">
-    <!-- 
-        Each slide is composed by <img> and .info
-        - .info's position is customized with css in index.css
-        - each <img> parallax effect is declared by the following params inside its class:
-        
-        example: class="asset left-472 sp600 t120 z3"
-        left-472 means left: -472px from the center
-        sp600 is speed transition
-        t120 is top to 120px
-        z3 is z-index to 3
-        Note: Maintain this order of params
-
-        For the backgrounds, you can combine from the bgs folder :D
-    -->
-    <article class="slide" id="showcasing" style="background: url('img/backgrounds/landscape.png') repeat-x top center;">
-        <img class="asset left-30 sp600 t120 z1" src="img/slides/scene1/macbook.png" />
-        <div class="info">
-            <h2>Cursos bem baratinhos</h2>
-        </div>
-    </article>
-    <article class="slide" id="ideas" style="background: url('img/backgrounds/aqua.jpg') repeat-x top center;">
-        <div class="info">
-            <h5>We love to turn ideas into beautiful things.</h5>
-        </div>
-        <img class="asset left-480 sp600 t260 z1" src="img/slides/scene2/left.png" />
-        <img class="asset left-210 sp600 t213 z2" src="img/slides/scene2/middle.png" />
-        <img class="asset left60 sp600 t260 z1" src="img/slides/scene2/right.png" />
-    </article>
-    <article class="slide" id="tour" style="background: url('img/backgrounds/indigo.jpg') repeat-x top center;">
-        <img class="asset left-472 sp650 t143 z3" src="http://localhost/jjc/gerSite/uploads/b7f10a23a8ea858.jpg" />
+    <article class="slide" id="tour" style="background: url('{{asset('img/backgrounds/mangos.jpg')}}') repeat-x top center;">
+        <img class="asset left-472 sp650 t143 z3" src="gerSite/uploads/dbd4e80b6718e24.jpg" style="width:650px" />
         <img class="asset left-430 sp900 t346 z4" src="img/logo_teste.png" />
         <div class="info">
-            <h2>Fully Responsive theme</h2>
-            <a href="features.html">TOUR THE PRODUCT</a>
+            <h2>Curso de Montagem e manuten&ccedil;&atilde;o de computadores nos munic&iacute;pios </h2>
+            <a href="http://www.etop.net.br/?p=cursos/99/treinamento-educa-brasil/">Ver mais</a>
         </div>
     </article>
-    <article class="slide" id="responsive" style="background: url('img/backgrounds/color-splash.jpg') repeat-x top center;">
-        <img class="asset left-472 sp600 t120 z3" src="img/slides/scene4/html5.png" />
-        <img class="asset left-190 sp500 t120 z2" src="img/slides/scene4/css3.png" />
-        <div class="info">
-            <h3>
-                Responsive <strong>HTML5 & CSS3</strong>
-                Theme
-            </h3>                
-        </div>
-    </article>        
 </section>
 
 <div id="showcase">

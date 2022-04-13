@@ -37,7 +37,7 @@
     <![endif]-->
 <meta http-equiv="Content-Type" content="text/html; " /></head>
 <body class="pull_top">
-	<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar navbar-inverse transparent navbar-fixed-top">
 		<div class="navbar-inner">
 		  <div class="container">
 			  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -45,7 +45,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="?">
+			  <a class="brand" href="?" class="active">
 				  <img src="img/ETOP_LOGO.fw.png" />
 			  </a>
 			  <div class="nav-collapse collapse">
@@ -107,9 +107,7 @@
 			  </div>
 		  </div>
 		</div>
-	  </div>
-
-	  
+	  </div>  
 
     @yield('content')
 
