@@ -45,7 +45,7 @@ header {
 }
 .navbar.navbar-inverse .navbar-inner {  
     padding: 10px 0px 10px 0px;
-    background: #002C54!important;    
+    background: #0e6bbd!important;    
 }
 .navbar.navbar-inverse .navbar-inner.sticky {
     background: #004A8C;
@@ -64,7 +64,6 @@ header {
     font-weight: bold;
     color: #fff;
     text-shadow: 0 1px 0 rgba(0,0,0,.5);
-    opacity: .6;
     filter: alpha(opacity=60);
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
@@ -110,7 +109,7 @@ header {
 -------------------------------------------------- */
 #footer {
 	min-height: 260px;
-	background-color: #004A8C;
+	background-color: #0e6bbd;
 	color: #fff;
 	padding-top: 35px;
 }
@@ -476,21 +475,7 @@ padding: 10px 13px 10px!important;
 	text-align:center;
 	font-weight:bold;
 }
-.label_galeria_cursos_ead{
-	color:#30896E;
-}
-.label_galeria_cursos_adm{
-	color:#85ACCC;
-}
-.label_galeria_cursos_info{
-	color:#E04F4F;
-}
-.label_galeria_cursos_industrial{
-	color:#F5911E;
-}
-.label_galeria_cursos_idiomas{
-	color:#92CE96;
-}
-.label_galeria_cursos_servicos{
-	color:#6FAFAC;
+.label_galeria_cursos{
+	color:#0d0e0d;
+	text-transform: uppercase;
 }

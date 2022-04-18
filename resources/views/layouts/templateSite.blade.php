@@ -4,7 +4,7 @@
 	<title>ETOP Qualifica&ccedil;&atilde;o Profissional | Cursos de Inform&aacute;tica e profissionalizantes</title>
 
 	<link rel="shortcut icon" href="favicon1.ico" />
-	<link rel="icon" href="favicon1.ico" />
+	<link rel="icon" href="favicon.ico" />
     
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 	<meta name="author" content="Web Cabe&ccedil;as Solu&ccedil;&otilde;es Web" />
@@ -16,7 +16,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="ETOP Qualifica&ccedil;&atilde;o Profissional" />
 	<meta property="og:url" content="www.etop.net.br/?" />
-	<meta property="og:image" content="/img/logo_face.jpg" />
+	<meta property="og:image" content="{{asset('img/logo_face.jpg')}}" />
 	<meta property="og:description" content="ETOP Qualifica&ccedil;&atilde;o Profissional localizada em Palmas - TO oferece v&aacute;rios cursos profissionalizantes nas áreas de : Profissional Digital, Gest&atilde;o Financeira, Designer Gr&aacute;fico, Web Designer Profissional, Cria&ccedil;&atilde;o E Edi&ccedil;&atilde;o De V&iacute;deos, Melhor Idade, On Kids, Assistente De Marketing, Atendente De Farm&aacute;cia, Curso Preparat&oacute;rio De Auxiliar Odontol&oacute;gico, Desenvolvedor De Jogos, Linux, Programador Profissional, T&eacute;cnicas Sucroalcooleiras, Inform&aacute;tica Para Concurso e serviços: Assist&ecirc;ncia T&eacute;cnica, Cyber caf&eacute;, Encaderna&ccedil;&atilde;o, Jogos, Loca&ccedil;&atilde;o de projetores, Recarga de Cartuchos, Telemensagens" />
 	
 	
@@ -28,9 +28,9 @@
 
 	<link rel="stylesheet" href="{{asset('css/index.css')}}" type="text/css" media="screen" />    
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" type="text/css" href="{{asset('css/lib/animate.css')}}" media="screen, projection" /> 
-	<link rel="stylesheet" href="{{asset('css/lib/flexslider.css')}}" type="text/css" media="screen" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    
+	@yield('css')
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,13 +45,13 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="?" class="active">
-				  <img src="img/ETOP_LOGO.fw.png" />
+			  <a class="brand" href="{{route('home')}}" class="active">
+				  <img src="{{asset('img/logo-etop.png')}}" width="150" />
 			  </a>
 			  <div class="nav-collapse collapse">
 				  <ul class="nav pull-right">
 					  <li><a href="{{route('quemsomos')}}">QUEM SOMOS</a></li>
-					  <li class="dropdown">
+					  <!--<li class="dropdown">
 						  <a href="#" class="dropdown-toggle und" data-toggle="dropdown">
 							  UNIDADES
 							  <b class="caret"></b>
@@ -66,7 +66,7 @@
 							  <li><a href="?p=unidades/cristalandia">Cristal&acirc;ndia</a></li>
 							  <li><a href="?p=unidades/paraiso">Para&iacute;so</a></li>
 						  </ul>
-					  </li>
+					  </li>-->
 					  <!--<li><a href="?p=cursos">CURSOS</a></li>-->
 					  <li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CURSOS
@@ -82,7 +82,7 @@
 							  <li><a href="?p=modulos/todos">Ver todos os m&oacute;dulos</a></li>
 						  </ul>
 					  </li>
-					  <li><a href="?p=metodologia">METODOLOGIA</a></li>
+					  <li><a href="{{route('metodologia')}}">METODOLOGIA</a></li>
 					  <!--<li><a href="?p=contato">UNIDADES</a></li>-->				
 					  <!--<li><a href="about-us.html">PROMOÃ‡Ã•ES</a></li>-->
 					  <li class="dropdown">
@@ -101,8 +101,7 @@
 							  <!--<li><a href="coming-soon.html">Cursos Itinerantes</a></li>-->
 						  </ul>
 					  </li>
-					  <li><a href="?p=contato">PR&Eacute;-MATR&Iacute;CULA</a></li>
-					  <li><a href="?p=contato">CONTATO</a></li>             
+					  <li><a href="{{route('contato')}}">CONTATO</a></li>             
 				  </ul>
 			  </div>
 		  </div>
@@ -119,20 +118,19 @@
 				<div class="span12">
 					<div class="row social">
 						<div class="span12">
-							<a href="https://www.facebook.com/jjcfprofissional" class="facebook" target="_blank">
-								<span class="socialicons ico1"></span>
-								<span class="socialicons_h ico1h"></span>
+							<a href="https://www.facebook.com/etopeducacao" class="facebook" target="_blank">
+								<img src="{{asset('img/facebook.png')}}" width="30">
 							</a>
-							<a href="https://twitter.com/jjcinformatica" class="twitter" target="_blank">
-								<span class="socialicons ico2"></span>
-								<span class="socialicons_h ico2h"></span>
-							</a>                                                       
+							<a href="https://www.instagram.com/etopeducacao/" class="twitter" target="_blank">
+								<img src="{{asset('img/instagram.png')}}" width="30">
+							</a>                                
 						</div>
 					</div>
 					<div class="row copyright">
 						<div class="span12">
-							ETOP Qualifica&ccedil;&atilde;o Profissional &copy; - Todos os direitos reservados <br />
-							Fone: (63) 99253 - 6918
+							ETOP Educação &copy; - Todos os direitos reservados <br />
+							etopeducacao@gmail.com <br />
+							Fone: (63) 98483-5962
 						</div>
 					</div>
 				</div>            
@@ -142,12 +140,12 @@
 	
 	<div class="container">     
 		<div class="webcabecass row">			
-			<a href="https://bit.ly/2WwyttA"><img src="resources/img/WhatsApp-icone.png" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
+			<a href="https://contate.me/etopeducacao" target="_blank"><img src="{{asset('img/WhatsApp-icone.png')}}" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
 		</div>
 	</div>
 
     <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('/js/theme.js')}}"></script>
 	

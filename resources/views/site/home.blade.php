@@ -1,16 +1,22 @@
 @extends('layouts.templateSite')
 
+@section('css')
+<link rel="stylesheet" type="text/css" href="{{asset('css/lib/animate.css')}}" media="screen, projection" /> 
+<link rel="stylesheet" href="{{asset('css/lib/flexslider.css')}}" type="text/css" media="screen" />
+@endsection
+
 @section('content')
 
 <section id="feature_slider" class="">
+    @foreach($showcases as $showcase)
     <article class="slide" id="tour" style="background: url('{{asset('img/backgrounds/mangos.jpg')}}') repeat-x top center;">
-        <img class="asset left-472 sp650 t143 z3" src="gerSite/uploads/dbd4e80b6718e24.jpg" style="width:650px" />
-        <img class="asset left-430 sp900 t346 z4" src="img/logo_teste.png" />
+        <img class="asset left-472 sp650 t143 z3" src="{{asset('/storage/'.$showcase->image)}}" style="width:400px;" />
         <div class="info">
-            <h2>Curso de Montagem e manuten&ccedil;&atilde;o de computadores nos munic&iacute;pios </h2>
-            <a href="http://www.etop.net.br/?p=cursos/99/treinamento-educa-brasil/">Ver mais</a>
+            <h2>{{$showcase->title}} </h2>
+            <a href="{{$showcase->url}}">Ver mais</a>
         </div>
     </article>
+    @endforeach
 </section>
 
 <div id="showcase">
@@ -22,36 +28,14 @@
             <div class="span1">
                 &nbsp;
             </div>
+            @foreach($categories as $category)
             <div class="span2">
-                <div class="centralizar">
-                    <a href="?p=cursos/administrativos"><img src="img/administrativo.png" title="Administra&ccedil;&atilde;o/Gest&atilde;o" /></a>
-                    <span class="label_galeria_cursos_adm">ADM/GEST&Atilde;O</span>
+                <div class="centralizar" style="text-transform: uppercase">
+                    <a href="?p=cursos/idiomas"><img src="{{asset('storage/'.$category->image)}}" title="{{$category->description}}" /></a>
+                    <span class="label_galeria_cursos">{{$category->description}}</span>
                 </div>
             </div>
-            <div class="span2">
-                <div class="centralizar">
-                    <a href="?p=cursos/informatica"><img src="img/informatica.png" title="Cursos de Inform&aacute;tica" /></a>
-                <span class="label_galeria_cursos_info">INFORM&Aacute;TICA</span>
-                </div>
-            </div>
-            <div class="span2">
-                <div class="centralizar">
-                    <a href="?p=cursos/ead"><img src="img/ead.png" title="Cursos EAD" /></a>
-                    <span class="label_galeria_cursos_industrial">CURSOS EAD</span>
-                </div>
-            </div>
-            <div class="span2">
-                <div class="centralizar">
-                    <a href="?p=cursos/enem"><img src="img/enem.png" title="ENEM" /></a>
-                    <span class="label_galeria_cursos_ead">ENEM</span>
-                </div>
-            </div>
-            <div class="span2">
-                <div class="centralizar">
-                    <a href="?p=cursos/idiomas"><img src="img/idiomas.png" title="Cursos Idiomas" /></a>
-                    <span class="label_galeria_cursos_idiomas">IDIOMAS</span>
-                </div>
-            </div>
+                @endforeach
             <div class="span1">
                 &nbsp;
             </div>
@@ -183,10 +167,10 @@
     <div class="container">            
         <div class="row feature ss">
             <div class="span7">
-               <a href="?p=contato"><img src="img/matricula.png" title="fa&ccedil;a sua matr&iacute;cula" /></a><br />
+               <a href="?p=contato"><img src="{{asset('img/matricula.png')}}" title="fa&ccedil;a sua matr&iacute;cula" /></a><br />
             </div>
             <div class="span5">
-                <div id="19"></div><iframe width="374" height="246" src="http://www.youtube.com/embed/keP_kJgmqrI" frameborder="0" allowfullscreen></iframe>
+                <div id="19"></div><iframe width="374" height="246" src="https://www.youtube.com/embed/keP_kJgmqrI" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div class="section_header">
@@ -195,25 +179,25 @@
         <div class="row feature ss">
             <div class="span3">
                 <div class="centralizar">
-                    <a href="http://app.evoluaeducacao.com.br" target="_blank"><img src="img/estude_online.png" title="Estude Online" /></a>
-                    <span class="label_galeria_cursos_servicos">ESTUDE ONLINE</span>
+                    <a href="https://app.evoluaeducacao.com.br" target="_blank"><img src="img/estude_online.png" title="Estude Online" /></a>
+                    <span class="label_galeria_cursos_servicos">ESTUDE ONLINE<br /> PLATAFORMA 01</span>
                 </div>
             </div>
             <div class="span3">
                 <div class="centralizar">
-                    <a href="/dkweb"><img src="img/portal_aluno.png" title="Portal do Aluno" /></a>
-                    <span class="label_galeria_cursos_servicos">PORTAL DO ALUNO</span>
+                    <a href="{{route('vimeo_course_site')}}"><img src="img/portal_aluno.png" title="Portal do Aluno" /></a>
+                    <span class="label_galeria_cursos_servicos">ESTUDE ONLINE<br /> PLATAFORMA 02</span>
                 </div>
             </div>
             <div class="span3">
                 <div class="centralizar">
-                    <a href="http://www.necurricular.com.br" target="_blank"><img src="img/banco_curriculo.png" title="Banco de Curr&iacute;culos" /></a>
+                    <a href="#"><img src="img/banco_curriculo.png" title="Banco de Curr&iacute;culos" /></a>
                     <span class="label_galeria_cursos_servicos">BANCO DE CURR&Iacute;CULOS (NEC)</span>
                 </div>
             </div>
             <div class="span3">
                 <div class="centralizar">
-                    <a href="dkweb/valida_certificado.php"><img src="img/busca_certificado.png" title="Consulte seu certificado" /></a>
+                    <a href="#"><img src="img/busca_certificado.png" title="Consulte seu certificado" /></a>
                     <span class="label_galeria_cursos_servicos">CERTIFICADOS</span>
                 </div>
             </div>	
@@ -222,8 +206,15 @@
             <div class="span7">
                 <div class="section_header">
                     <h3>&Uacute;ltimas Not&iacute;cias</h3>
-                </div> 
-                 <h5><a href="?p=noticias/100/curso-de-montagem-e-manutena-sect-a-pound-o-de-computadores-nos-munica-shy-pios-/ "><em>14/07/2021</em> - Curso de Montagem e manuten&Atilde;&sect;&Atilde;&pound;o de computadores nos munic&Atilde;&shy;pios.</a></h5><h5><a href="?p=noticias/89/treinamento-jovem-do-futuro/ "><em>08/07/2021</em> - Treinamento Jovem do Futuro</a></h5><h5><a href="?p=noticias/86/promocao-emprego-na-mao/ "><em>03/06/2014</em> - PROMO&Ccedil;&Atilde;O EMPREGO NA M&Atilde;O</a></h5><h5><a href="?p=noticias/85/novo-curso-excel-avancado/ "><em>30/05/2014</em> - NOVO CURSO: EXCEL AVAN&Ccedil;ADO</a></h5><h5><a href="?p=noticias/84/matriculas-abertas-unidade-de-aparecida-do-rio-negro-to/ "><em>28/04/2014</em> - MATR&Iacute;CULAS ABERTAS UNIDADE DE APARECIDA DO RIO NEGRO - TO</a></h5><p class="leia_mais"><a href="?p=noticias">Todas as Not&iacute;cias</a></p>
+                </div>
+                @foreach($notices as $notice)
+                 <h5>
+                    <a href="{{route('notice_site', ['id'=>$notice->id])}}">
+                        <em>{{$notice->created_at->format('d/m/Y')}}</em> - {{$notice->title}}
+                    </a>
+                </h5>
+                @endforeach
+                <p class="leia_mais"><a href="{{route('noticies_site')}}">Todas as Not&iacute;cias</a></p>
             </div>
             <div class="span5 info">
                 <div class="fb-like-box" data-href="https://www.facebook.com/jjcfprofissional?fref=ts" data-width="370" data-height="271" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
