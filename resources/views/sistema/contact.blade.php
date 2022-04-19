@@ -47,7 +47,7 @@
         @endforeach
         @if($contacts->isEmpty())
         <tr>
-          <td colspan="3"> Não há módulos registrados</td>
+          <td colspan="3"> Não há mensagens registradas</td>
         </tr>
         @endif
       </tbody>

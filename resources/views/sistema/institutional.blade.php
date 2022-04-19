@@ -50,7 +50,7 @@
                 }(document, 'script', 'facebook-jssdk'));</script>
             </div>
             <div>
-                <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" rel="nofollow">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" rel="nofollow">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
             </div>
             <div>							
                 <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
@@ -67,7 +67,7 @@
         </div>
         <hr />
         <div>				
-                <div class="fb-comments" data-href="http://www.etopeducacao.com.br/?p=cursos/91/atendente-de-farma-iexcl-cia/" data-width="960" data-num-posts="10"></div>
+                <div class="fb-comments" data-href="https://www.etopeducacao.com.br/?p=cursos/91/atendente-de-farma-iexcl-cia/" data-width="960" data-num-posts="10"></div>
         </div>	
     </div>
 </div>

@@ -3,8 +3,8 @@
 <head>
 	<title>ETOP Educação | Cursos de Inform&aacute;tica e profissionalizantes</title>
 
-	<link rel="shortcut icon" href="favicon1.ico" />
-	<link rel="icon" href="favicon1.ico" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" href="favicon.ico" />
     
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 	<meta name="author" content="Márcio Carvalho dos Santos" />
@@ -128,13 +128,11 @@
 	</div>
 
     <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('/js/theme.js')}}"></script>
 	
 	<script type="text/javascript" src="{{asset('js/index-slider.js')}}"></script> 
-	
-	<script type="text/javascript" src="https://app.contako.com.br/WidgetJSFixo.sikoni/?cadastro=A3998B80FE"></script>
 
 	@yield('script')
 
@@ -146,7 +144,7 @@
 
 		  (function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
