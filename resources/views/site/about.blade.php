@@ -2,6 +2,11 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/about.css')}}" type="text/css" media="screen" />
+<style>
+    .intro{
+        text-align: justify;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -12,9 +17,7 @@
         </div>
         <div class="row">
             <div class="span12 intro">
-                <p>Uma empresa que busca a cada dia se aperfei&ccedil;oar e trazer o que h&aacute; de mais moderno para nossos clientes. Seriedade, responsabilidade e compromisso s&atilde;o os maiores diferenciais da JJC Forma&ccedil;&atilde;o Profissional.</p>
-<p>A JJC Forma&ccedil;&atilde;o Profissional oferece o que h&aacute; de melhor e mais moderno em cursos de inform&aacute;tica e profissionalizantes no pa&iacute;s. S&atilde;o mais de 60 op&ccedil;&otilde;es de curso sempre atualizados, instrutores com v&aacute;rios anos de experi&ecirc;ncia e o material did&aacute;tico mais completo poss&iacute;vel para um melhor aprendizado. Buscamos sempre atender as expectativas dos nossos alunos disponibilizando para os mesmo computadores de ultima gera&ccedil;&atilde;o e salas climatizadas com recursos multim&iacute;dia e TVs onde s&atilde;o abordadas grandes partes dos conte&uacute;dos dos cursos ministrados. Hor&aacute;rios flex&iacute;veis, 01 aluno por computador, aulas 100% pr&aacute;ticas e certificado com reconhecimento em todo Brasil.</p>
-<p>A JJC Forma&ccedil;&atilde;o Profissional tamb&eacute;m ministra cursos e treinamentos em cidades e povoados do interior do estado do Tocantins. Navegue pelo nosso site e confira tudo que a nossa empresa pode oferecer para voc&ecirc; que mora em Palmas e regi&atilde;o.</p>
+                {!! $institutional->content !!}
             </div>                
         </div>
     </div>

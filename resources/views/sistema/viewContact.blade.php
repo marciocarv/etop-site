@@ -16,27 +16,19 @@
 <div id="aboutus">
     <div class="container">
         <div class="acoes">
-            <a class="btn btn-large btn-info" type="button" href="{{route('pack')}}"><i class="icon-arrow-left"></i> Voltar</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-add-modules', ['id'=>$pack->id])}}"><i class="icon-plus-sign"></i> Adicionar Modulo</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-update-pack', ['id'=>$pack->id])}}"><i class="icon-edit"></i> Editar</a>
-            <a class="btn btn-large btn-danger" type="button" href="{{route('delete-pack', ['id'=>$pack->id])}}"><i class="icon-trash"></i> Apagar</a>
+            <a class="btn btn-large btn-info" type="button" href="{{route('contact')}}"><i class="icon-arrow-left"></i> Voltar</a>
+            <a class="btn btn-large btn-danger" type="button" href="{{route('delete-contact', ['id'=>$contact->id])}}"><i class="icon-trash"></i> Apagar</a>
         </div>
-        <div class="section_header">
-            <h3>{{$pack->name}}</h3>
+        <div class="">
+            <h3>Nome: {{$contact->name}}</h3>
+            <h3>Email: {{$contact->email}}</h3>
+            <h3>Departamento: {{$contact->department}}</h3>
+            <h3>Mensagem:</h3>
+            <h3>{!! $contact->message !!}</h3>
         </div>
         <div class="row">
             <div class="span12 intro">
-                <p>Módulos que Compõe o Pacote:</p>
-                <p>
-                  <ol>
-                    @foreach($modules as $module)
-                    <li>
-                      <a href="{{route('viewModule', ['id'=>$module->id])}}">{{$module->description}}</a>
-                    </li>
-                    @endforeach
-                  </ol>
-                </p>
-                {!! $pack->description !!}
+                
             </div>                
         </div>
         <hr /><br/>

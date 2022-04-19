@@ -225,8 +225,9 @@
     margin-right: 0;
 }
 #showcase .features_op1_row .feature .text{
-    margin: 32px auto 0;
+    margin: 10px 0px 20px 10px;
     width: 87%;
+    text-align: center;
 }
 #showcase .features_op1_row .feature .text h6{
     margin: 0 0 14px 0;
@@ -236,6 +237,7 @@
     margin: 0;
     font-size: 14px;
     line-height: 23px;
+    text-align: justify;
 }
 #showcase .features_op1_row .feature .img_box{
     position: relative;

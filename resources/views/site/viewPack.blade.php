@@ -1,4 +1,4 @@
-@extends('layouts.templateSistema')
+@extends('layouts.templateSite')
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/about.css')}}" type="text/css" media="screen" />
@@ -6,21 +6,12 @@
     .module{
       .container: 90px;
     }
-    .acoes{
-        margin: 20px 0;
-    }
   </style>
 @endsection
 
 @section('content')
 <div id="aboutus">
     <div class="container">
-        <div class="acoes">
-            <a class="btn btn-large btn-info" type="button" href="{{route('pack')}}"><i class="icon-arrow-left"></i> Voltar</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-add-modules', ['id'=>$pack->id])}}"><i class="icon-plus-sign"></i> Adicionar Modulo</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-update-pack', ['id'=>$pack->id])}}"><i class="icon-edit"></i> Editar</a>
-            <a class="btn btn-large btn-danger" type="button" href="{{route('delete-pack', ['id'=>$pack->id])}}"><i class="icon-trash"></i> Apagar</a>
-        </div>
         <div class="section_header">
             <h3>{{$pack->name}}</h3>
         </div>
@@ -31,7 +22,7 @@
                   <ol>
                     @foreach($modules as $module)
                     <li>
-                      <a href="{{route('viewModule', ['id'=>$module->id])}}">{{$module->description}}</a>
+                      <a href="{{route('viewModule_site', ['id'=>$module->id])}}">{{$module->description}}</a>
                     </li>
                     @endforeach
                   </ol>

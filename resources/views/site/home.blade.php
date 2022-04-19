@@ -31,11 +31,12 @@
             @foreach($categories as $category)
             <div class="span2">
                 <div class="centralizar" style="text-transform: uppercase">
-                    <a href="?p=cursos/idiomas"><img src="{{asset('storage/'.$category->image)}}" title="{{$category->description}}" /></a>
+                    <a href="{{route('pack-by-category_site', ['category'=>$category->description, 'id'=>$category->id])}}">
+                        <img src="{{asset('storage/'.$category->image)}}" title="{{$category->description}}" /></a>
                     <span class="label_galeria_cursos">{{$category->description}}</span>
                 </div>
             </div>
-                @endforeach
+            @endforeach
             <div class="span1">
                 &nbsp;
             </div>
@@ -52,112 +53,24 @@
             <!-- Features Row -->
             <div class="features_op1_row">
                 <!-- Feature -->
+                @foreach($spotlights as $spotlight)
                 <div class="span4 feature first">
                     <div class="img_box">
-                        <a href="?p=cursos/91/tecnologia-fundamental-iniciante-/">
-                            <img src="img/profissional_digital.jpg" />
+                        <a href="{{route('viewPack_site', ['id'=>$spotlight->id])}}">
+                            <img src="{{asset('/storage/'.$spotlight->image)}}" />
                             <span class="circle"> 
                                 <span class="plus">&#43;</span>
                             </span>
                         </a>
                     </div>
                     <div class="text">
-                        <h6>Tecnologia Fundamental</h6>
+                        <h6>{{$spotlight->name}}</h6>
                         <p>
-                            Curso para iniciantes na &aacute;rea de inform&aacute;tica ou para aqueles que querem reciclar seus conhecimentos.
+                            {{$spotlight->resume}}
                         </p>
                     </div>
                 </div>
-                <!-- Feature -->
-                <div class="span4 feature">
-                    <div class="img_box">
-                        <a href="?p=cursos/89/operador-de-computador-iniciante-/">
-                            <img src="img/operador_computador.jpg" />
-                            <span class="circle"> 
-                                <span class="plus">&#43;</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <h6>Operador de Computador</h6>
-                        <p>
-                            Voc&ecirc; vai aprender a utilizar desde mouse e teclado at&eacute; as novas tecnologias, como tablets e os novos perif&eacute;ricos al&eacute;m de instalar programas, como: Jogos, aplicativos e antiv&iacute;rus.
-                        </p>
-                    </div>
-                </div>
-                <!-- Feature -->
-                <div class="span4 feature last">
-                    <div class="img_box">
-                        <a href="?p=cursos/95/conceitos-em-animacao-e-games-avancado-/">
-                            <img src="img/programador_games.jpg" />
-                            <span class="circle"> 
-                                <span class="plus">&#43;</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <h6>Conceitos em anima&ccedil;&atilde;o e Games</h6>
-                        <p>
-                            Este curso surge como uma grande novidade no mercado, onde o profissional desenvolver&aacute; jogos para computadores, celulares e internet.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row feature_wrapper">
-            <!-- Features Row -->
-            <div class="features_op1_row">
-                <!-- Feature -->
-                <div class="span4 feature first">
-                    <div class="img_box">
-                        <a href="?p=cursos/96/desenvolvedor-web-avancado-/">
-                            <img src="img/webdesign.jpg" />
-                            <span class="circle"> 
-                                <span class="plus">&#43;</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <h6>Desenvolvedor Web</h6>
-                        <p>
-                            Oferecemos um curso ideal para voc&ecirc; que quer ser um profissional de web, com elementos essenciais para constru&ccedil;&atilde;o de p&aacute;ginas para a internet.
-                        </p>
-                    </div>
-                </div>
-                <!-- Feature -->
-                <div class="span4 feature">
-                    <div class="img_box">
-                        <a href="?p=cursos/97/tecnicas-em-gestao-de-empresas-avancado-/">
-                            <img src="img/assistente_adm.jpg" />
-                            <span class="circle"> 
-                                <span class="plus">&#43;</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <h6>T&eacute;cnicas em Gest&atilde;o de empresa</h6>
-                        <p>
-                            Essa &eacute; uma profiss&atilde;o cujas atividades est&atilde;o focadas em fun&ccedil;&otilde;es vitais da empresa, pois est&atilde;o diretamente relacionadas com o bom funcionamento administrativo, com a gest&atilde;o do neg&oacute;cio.
-                        </p>
-                    </div>
-                </div>
-                <!-- Feature -->
-                <div class="span4 feature last">
-                    <div class="img_box">
-                        <a href="?p=cursos/98/analise-em-credito-e-cobranca-avancado-/">
-                            <img src="img/gestao_financeira.jpg" />
-                            <span class="circle"> 
-                                <span class="plus">&#43;</span>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="text">
-                        <h6>An&aacute;lise em Cr&eacute;dito e Cobran&ccedil;a</h6>
-                        <p>
-                            O p&uacute;blico deste curso &eacute; composto por jovens ou pessoas em geral que buscam ingressar ou melhorar sua posi&ccedil;&atilde;o no mercado de trabalho.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -179,13 +92,13 @@
         <div class="row feature ss">
             <div class="span3">
                 <div class="centralizar">
-                    <a href="https://app.evoluaeducacao.com.br" target="_blank"><img src="img/estude_online.png" title="Estude Online" /></a>
+                    <a href="https://app.evoluaeducacao.com.br" target="_blank"><img src="{{asset('img/estude_online.png')}}" title="Estude Online" /></a>
                     <span class="label_galeria_cursos_servicos">ESTUDE ONLINE<br /> PLATAFORMA 01</span>
                 </div>
             </div>
             <div class="span3">
                 <div class="centralizar">
-                    <a href="{{route('vimeo_course_site')}}"><img src="img/portal_aluno.png" title="Portal do Aluno" /></a>
+                    <a href="{{route('vimeo_course_site')}}"><img src="{{asset('img/estude_online.png')}}" title="Portal do Aluno" /></a>
                     <span class="label_galeria_cursos_servicos">ESTUDE ONLINE<br /> PLATAFORMA 02</span>
                 </div>
             </div>
@@ -209,12 +122,12 @@
                 </div>
                 @foreach($notices as $notice)
                  <h5>
-                    <a href="{{route('notice_site', ['id'=>$notice->id])}}">
-                        <em>{{$notice->created_at->format('d/m/Y')}}</em> - {{$notice->title}}
+                    <a href="{{route('viewNotice_site', ['id'=>$notice->id])}}">
+                        <em>{{$notice->created_at->format('d/m/Y')}}</em> - {{$notice->title}}... Ver mais
                     </a>
                 </h5>
                 @endforeach
-                <p class="leia_mais"><a href="{{route('noticies_site')}}">Todas as Not&iacute;cias</a></p>
+                <p class="leia_mais"><a href="{{route('notice_site')}}">Todas as Not&iacute;cias</a></p>
             </div>
             <div class="span5 info">
                 <div class="fb-like-box" data-href="https://www.facebook.com/jjcfprofissional?fref=ts" data-width="370" data-height="271" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>

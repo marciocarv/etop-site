@@ -16,27 +16,24 @@
 <div id="aboutus">
     <div class="container">
         <div class="acoes">
-            <a class="btn btn-large btn-info" type="button" href="{{route('pack')}}"><i class="icon-arrow-left"></i> Voltar</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-add-modules', ['id'=>$pack->id])}}"><i class="icon-plus-sign"></i> Adicionar Modulo</a>
-            <a class="btn btn-large btn-primary" type="button" href="{{route('set-update-pack', ['id'=>$pack->id])}}"><i class="icon-edit"></i> Editar</a>
-            <a class="btn btn-large btn-danger" type="button" href="{{route('delete-pack', ['id'=>$pack->id])}}"><i class="icon-trash"></i> Apagar</a>
+            <a class="btn btn-large btn-primary" type="button" href="{{route('set-update-institutional', ['id'=>$institutional->id])}}"><i class="icon-edit"></i> Editar</a>
         </div>
+        @if(session('success'))
+        <div class="alert alert-success">
+          {{session('success')}}
+        </div>
+        @endif
+        @if(session('error'))
+        <div class="alert alert-danger">
+          {{session('error')}}
+        </div>
+        @endif
         <div class="section_header">
-            <h3>{{$pack->name}}</h3>
+            <h3>Quem somos</h3>
         </div>
         <div class="row">
             <div class="span12 intro">
-                <p>Módulos que Compõe o Pacote:</p>
-                <p>
-                  <ol>
-                    @foreach($modules as $module)
-                    <li>
-                      <a href="{{route('viewModule', ['id'=>$module->id])}}">{{$module->description}}</a>
-                    </li>
-                    @endforeach
-                  </ol>
-                </p>
-                {!! $pack->description !!}
+                {!! $institutional->content !!}
             </div>                
         </div>
         <hr /><br/>

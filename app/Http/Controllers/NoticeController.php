@@ -80,10 +80,12 @@ class NoticeController extends Controller
 
         $notice->save();
 
-        return Redirect()->route('notice')->with('success', 'Notícia editada com sucesso!');
+        return redirect()->route('notice')->with('success', 'Notícia editada com sucesso!');
     }
 
-    public function view(){
-        
+    public function view($id){
+        $notice = Notice::findOrFail($id);
+
+        return view('sistema.viewNotice', ['notice'=>$notice]);
     }
 }

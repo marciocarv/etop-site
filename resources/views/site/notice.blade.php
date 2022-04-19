@@ -8,29 +8,30 @@
 <div id="aboutus">
     <div class="container">
         <div class="section_header">
-            <h3>Cursos da Plataforma de estudo</h3>
+            <h3>Todas as Notícias</h3>
         </div>
         <div class="row">
             <div class="span12 intro">
-                @foreach($vimeo_courses as $vimeo_course)
+                @foreach($noticies as $notice)
                 <div class="media">
-                    <a class="pull-left" href="{{$vimeo_course->url}}" target="_blank">
-                      <img class="media-object" src="{{asset('storage/'.$vimeo_course->image)}}" width="100">
+                    <a class="pull-left" href="{{route('viewNotice_site', ['id'=>$notice->id])}}">
+                      <img class="media-object" src="{{asset('storage/'.$notice->image)}}" width="100">
                     </a>
                     <div class="media-body">
-                      <h4 class="media-heading">{{$vimeo_course->name}}</h4>
-                      <p><strong><a href="{{$vimeo_course->url}}" target="_blank">Acessar o curso</a></strong></p>
+                      <h4 class="media-heading">{{$notice->title}}</h4>
+                      <p><strong><a href="{{route('viewNotice_site', ['id'=>$notice->id])}}">Ver Notícia</a></strong></p>
                     </div>
                 </div>
                 <hr>
                 @endforeach
             </div>
+            {{$noticies->links()}}
         </div>
-        {{$vimeo_courses->links()}}
     </div>
 </div>
 
 <div class="container">            
+
     <hr />
     <div class="btn-share">
         <div>
@@ -63,11 +64,7 @@
 
 </div>
 
-
-
-
 @endsection
-
 
 @section('script')
 <script>(function(d, s, id) {

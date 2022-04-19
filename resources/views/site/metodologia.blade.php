@@ -12,17 +12,7 @@
         </div>
         <div class="row">
             <div class="span12 intro">
-                <p>A estrutura de ensino/aprendizagem proposta em nosso modelo educacional transforma o aluno, que costumeiramente &eacute; um simples passageiro
-                     que observa, em um aluno atento, observador, que interage com o conte&uacute;do absorvendo o conceito apresentado e construindo o seu conhecimento.
-                      Como resultado, surge um profissional ativo e preparado para um mercado cada vez mais exigente.</p>
-                <p>Os m&oacute;dulos de conhecimento tem dura&ccedil;&atilde;o de 16h a 150h e cada aula &eacute; estruturada em tres partes, sendo:</p>
-                Parte 1 - O aluno assiste a explica&ccedil;&atilde;o narrada pelo avatar.<p></p>
-                <p>Parte 2 - O aluno executa exerc&iacute;cios que simulam o ambiente pr&aacute;tico da disciplina.</p>
-                <p>Parte 3 - O aluno faz uma avalia&ccedil;&atilde;o de aprendizagem.</p>
-                <p>Sempre que a nota da avalia&ccedil;&atilde;o for igual ou superior a 7 pontos, o aluno estar&aacute; liberado para a pr&oacute;xima li&ccedil;&atilde;o.</p>
-                <p>O aluno poder&aacute; assistir novamente a li&ccedil;&atilde;o quantas vezes quiser e desta forma o curso seguir&aacute; o seu tempo de aprendizagem.
-                     Em nosso modelo educacional &eacute; o curso que segue a evolu&ccedil;&atilde;o do aluno garantindo que cada etapa ultrapassada se tornou conhecimento
-                      consolidado.</p>
+                {!!$methodology->content!!}
             </div>                
         </div>
         <hr />

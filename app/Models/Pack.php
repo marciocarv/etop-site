@@ -13,7 +13,8 @@ class Pack extends Model
         'name',
         'description',
         'image',
-        'promocional'
+        'spotlight',
+        'resume'
     ];
 
     public function modules(){

@@ -69,20 +69,20 @@
       </div>
       @endif
       <div class="control-group">
-        <label class="control-label" for="inputPassword">Nova Imagem</label>
+        <label class="control-label" for="inputPassword">Nova Imagem 300x120</label>
         <div class="controls">
           <input type="file" id="inputPassword" name="image">
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="inputDescription">Pacote Promocional?</label>
+        <label class="control-label" for="inputDescription">Pacote em Destaque?</label>
         <div class="controls">
           <label class="radio">
             <input type="radio"
-             name="promocional" 
+             name="spotlight" 
              id="promocional" 
              value="n" 
-             @if($action == 'update' && $packUpdate->promocional == 'n')
+             @if($action == 'update' && $packUpdate->spotlight == 'n')
              checked
              @endif
              >
@@ -91,10 +91,10 @@
           <label class="radio">
             <input 
               type="radio" 
-              name="promocional" 
+              name="spotlight" 
               id="promocional" 
               value="s"
-              @if($action == 'update' && $packUpdate->promocional == 's')
+              @if($action == 'update' && $packUpdate->spotlight == 's')
               checked
               @endif
               >
@@ -102,11 +102,17 @@
           </label>
         </div>
       </div>
+      <div class="control-group" id="resume_campo">
+        <label class="control-label" for="inputResume">Resumo</label>
+        <div class="controls">
+          <textarea rows="5" name="resume" id="resume" placeholder="Escreva um breve resumo do pacote">@if($action == 'update'){{$packUpdate->resume}}@endif</textarea>
+        </div>
+      </div>
       <div class="control-group">
         <label class="control-label" for="inputDescription">Descrição</label>
         <div class="controls">
           <textarea rows="5" name="description" id="description">@if($action == 'update'){{$packUpdate->description}}@endif</textarea>
-      </div>
+        </div>
       </div>
       <div class="control-group">
         <div class="controls">
@@ -122,6 +128,7 @@
         <tr>
           <th>Nome</th>
           <th>Categoria</th>
+          <th>Destaque</th>
           <th>Ações</th>
         </tr>
       </thead>  
@@ -130,6 +137,7 @@
         <tr>
           <td>{{$pack->name}}</td>
           <td>{{$pack->category->description}}</td>
+          <td>{{$pack->spotlight == 's' ? 'Sim' : 'Não'}}</td>
           <td>
             <a href="{{route('set-add-modules', ['id'=>$pack->id])}}"><i class="icon-plus-sign"></i>Adicionar Módulos</a> |
             <a href="{{route('view-pack', ['id'=>$pack->id])}}"><i class="icon-eye-open"></i>Visualizar</a> |

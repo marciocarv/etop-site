@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ETOP Qualifica&ccedil;&atilde;o Profissional | Cursos de Inform&aacute;tica e profissionalizantes</title>
+	<title>ETOP Educação | Cursos de Inform&aacute;tica e profissionalizantes</title>
 
 	<link rel="shortcut icon" href="favicon1.ico" />
 	<link rel="icon" href="favicon1.ico" />
     
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
-	<meta name="author" content="Web Cabe&ccedil;as Solu&ccedil;&otilde;es Web" />
+	<meta name="author" content="Márcio Carvalho dos Santos" />
 			
-	<meta name="description" content="ETOP Qualifica&ccedil;&atilde;o Profissional localizada em Palmas - TO oferece v&aacute;rios cursos profissionalizantes nas áreas de : Profissional Digital, Gest&atilde;o Financeira, Designer Gr&aacute;fico, Web Designer Profissional, Cria&ccedil;&atilde;o E Edi&ccedil;&atilde;o De V&iacute;deos, Melhor Idade, On Kids, Assistente De Marketing, Atendente De Farm&aacute;cia, Curso Preparat&oacute;rio De Auxiliar Odontol&oacute;gico, Desenvolvedor De Jogos, Linux, Programador Profissional, T&eacute;cnicas Sucroalcooleiras, Inform&aacute;tica Para Concurso e serviços: Assist&ecirc;ncia T&eacute;cnica, Cyber caf&eacute;, Encaderna&ccedil;&atilde;o, Jogos, Loca&ccedil;&atilde;o de projetores, Recarga de Cartuchos, Telemensagens - Seu futuro come&ccedil;a aqui em Palmas e Aparecida do Rio Negro - Tocantins." />
-	<meta name="keywords" content="ETOP Qualifica&ccedil;&atilde;o Profissional, cursos, noticias, dicas importantes, audios, servi&ccedil;os, &uacute;ltimas not&iacute;cias"/>
+	<meta name="description" content="ETOP Educação localizada em Palmas - TO oferece v&aacute;rios cursos profissionalizantes nas áreas de : Profissional Digital, Gest&atilde;o Financeira, Designer Gr&aacute;fico, Web Designer Profissional, Cria&ccedil;&atilde;o E Edi&ccedil;&atilde;o De V&iacute;deos, Melhor Idade, On Kids, Assistente De Marketing, Atendente De Farm&aacute;cia, Curso Preparat&oacute;rio De Auxiliar Odontol&oacute;gico, Desenvolvedor De Jogos, Linux, Programador Profissional, T&eacute;cnicas Sucroalcooleiras, Inform&aacute;tica Para Concurso e serviços: Assist&ecirc;ncia T&eacute;cnica, Cyber caf&eacute;, Encaderna&ccedil;&atilde;o, Jogos, Loca&ccedil;&atilde;o de projetores, Recarga de Cartuchos, Telemensagens - Seu futuro come&ccedil;a aqui em Palmas e Aparecida do Rio Negro - Tocantins." />
+	<meta name="keywords" content="ETOP Educação, cursos, noticias, dicas importantes, audios, servi&ccedil;os, &uacute;ltimas not&iacute;cias"/>
 	
-	<meta property="og:title" content="ETOP Qualifica&ccedil;&atilde;o Profissional | Cursos de Inform&aacute;tica e profissionalizantes" />
+	<meta property="og:title" content="ETOP Educação | Cursos de Inform&aacute;tica e profissionalizantes" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="ETOP Qualifica&ccedil;&atilde;o Profissional" />
-	<meta property="og:url" content="www.etop.net.br/?" />
-	<meta property="og:image" content="/img/logo_face.jpg" />
-	<meta property="og:description" content="ETOP Qualifica&ccedil;&atilde;o Profissional localizada em Palmas - TO oferece v&aacute;rios cursos profissionalizantes nas áreas de : Profissional Digital, Gest&atilde;o Financeira, Designer Gr&aacute;fico, Web Designer Profissional, Cria&ccedil;&atilde;o E Edi&ccedil;&atilde;o De V&iacute;deos, Melhor Idade, On Kids, Assistente De Marketing, Atendente De Farm&aacute;cia, Curso Preparat&oacute;rio De Auxiliar Odontol&oacute;gico, Desenvolvedor De Jogos, Linux, Programador Profissional, T&eacute;cnicas Sucroalcooleiras, Inform&aacute;tica Para Concurso e serviços: Assist&ecirc;ncia T&eacute;cnica, Cyber caf&eacute;, Encaderna&ccedil;&atilde;o, Jogos, Loca&ccedil;&atilde;o de projetores, Recarga de Cartuchos, Telemensagens" />
+	<meta property="og:site_name" content="ETOP Educação" />
+	<meta property="og:url" content="https://www.etopeducacao.com.br/?" />
+	<meta property="og:image" content="{{asset('/img/logo_face.jpg')}}" />
+	<meta property="og:description" content="ETOP Educação localizada em Palmas - TO oferece v&aacute;rios cursos profissionalizantes nas áreas de : Profissional Digital, Gest&atilde;o Financeira, Designer Gr&aacute;fico, Web Designer Profissional, Cria&ccedil;&atilde;o E Edi&ccedil;&atilde;o De V&iacute;deos, Melhor Idade, On Kids, Assistente De Marketing, Atendente De Farm&aacute;cia, Curso Preparat&oacute;rio De Auxiliar Odontol&oacute;gico, Desenvolvedor De Jogos, Linux, Programador Profissional, T&eacute;cnicas Sucroalcooleiras, Inform&aacute;tica Para Concurso e serviços: Assist&ecirc;ncia T&eacute;cnica, Cyber caf&eacute;, Encaderna&ccedil;&atilde;o, Jogos, Loca&ccedil;&atilde;o de projetores, Recarga de Cartuchos, Telemensagens" />
 	
 	
     <!-- Styles -->
@@ -28,7 +28,7 @@
 
 	<link rel="stylesheet" href="{{asset('css/index.css')}}" type="text/css" media="screen" />    
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css' />
     
 	@yield('css')
 
@@ -63,7 +63,17 @@
 							</ul>
 						</li>
 						<li><a href="{{route('showcase')}}">GERENCIAR VITRINE</a></li>
-						<li><a href="{{route('quemsomos')}}">GERENCIAR PAGINAS</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle und" data-toggle="dropdown">
+								GERENCIAR PÁGINAS
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">                            
+								<li><a href="{{route('contact')}}">CONTATO</a></li>
+								<li><a href="{{route('institutional')}}">QUEM SOMOS</a></li>
+								<li><a href="{{route('methodology')}}">METODOLOGIA</a></li>
+							</ul>
+						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle und" data-toggle="dropdown">
 								GERENCIAR MÍDIAS
@@ -72,7 +82,6 @@
 							<ul class="dropdown-menu">                            
 								<li><a href="{{route('notice')}}">NOTÍCIAS</a></li>
 								<li><a href="{{route('module')}}">FOTOS</a></li>
-								<li><a href="{{route('pack')}}">VÍDEOS</a></li>
 							</ul>
 						</li>					               
 					</ul>

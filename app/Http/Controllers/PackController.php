@@ -27,7 +27,8 @@ class PackController extends Controller
         $pack->name = $request->name;
         $pack->description = $request->description;
         $pack->category_id = $request->category_id;
-        $pack->promocional = $request->promocional;
+        $pack->spotlight = $request->spotlight;
+        $pack->resume = $request->resume;
 
         if($request->hasFile('image') && $request->file('image')->isValid()){
             $requestImage = $request->image;
@@ -94,7 +95,8 @@ class PackController extends Controller
         $pack->name = $request->name;
         $pack->description = $request->description;
         $pack->category_id = $request->category_id;
-        $pack->promocional = $request->promocional;
+        $pack->spotlight = $request->spotlight;
+        $pack->resume = $request->resume;
 
         if($request->hasFile('image') && $request->file('image')->isValid()){
             $requestImage = $request->image;

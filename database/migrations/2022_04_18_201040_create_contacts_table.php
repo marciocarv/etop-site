@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePacksTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreatePacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('packs', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('name');
-            $table->longText('description');
-            $table->string('image');
-            $table->string('spotlight');
-            $table->string('resume')->nullable();
+            $table->string('email');
+            $table->string('department');
+            $table->longText('message');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreatePacksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packs');
+        Schema::dropIfExists('contacts');
     }
 }

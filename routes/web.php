@@ -6,6 +6,9 @@ use App\Http\Controllers\MetodologiaController;
 use App\Http\Controllers\QuemController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InstitutionalController;
+use App\Http\Controllers\MethodologyController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\PackController;
@@ -20,16 +23,32 @@ use App\Http\Controllers\Vimeo_courseController;
 Route::get('/', [SiteController::class, 'home'])->name('home');
 
 Route::get('/quemsomos', [SiteController::class, 'quem'])->name('quemsomos');
+Route::get('/institucional', [InstitutionalController::class, 'institutional'])->middleware(['auth'])->name('institutional');
+Route::get('/institucional/editar/{id}', [InstitutionalController::class, 'setUpdate'])->middleware(['auth'])->name('set-update-institutional');
+Route::post('/institucional/editar', [InstitutionalController::class, 'update'])->middleware(['auth'])->name('update-institutional');
 
 Route::get('/metodologia', [SiteController::class, 'metodologia'])->name('metodologia');
+Route::get('/metodologia/mostrar', [MethodologyController::class, 'methodology'])->middleware(['auth'])->name('methodology');
+Route::get('/metodologia/editar/{id}', [MethodologyController::class, 'setUpdate'])->middleware(['auth'])->name('set-update-methodology');
+Route::post('/metodologia/editar', [MethodologyController::class, 'update'])->middleware(['auth'])->name('update-methodology');
 
 Route::get('/contato', [SiteController::class, 'contato'])->name('contato');
+Route::post('/contato/enviar', [ContactController::class, 'store'])->name('store-contact');
+Route::get('/contato/listar', [ContactController::class, 'contact'])->middleware(['auth'])->name('contact');
+Route::get('/contato/visualizar/{id}', [ContactController::class, 'viewContact'])->middleware(['auth'])->name('view-contact');
+Route::get('/contato/apagar/{id}', [ContactController::class, 'delete'])->middleware(['auth'])->name('delete-contact');
 
 Route::get('/plataforma-2', [SiteController::class, 'vimeo_course'])->name('vimeo_course_site');
 
-Route::get('/noticia/{id}', [SiteController::class, 'viewNotice'])->name('notice_site');
+Route::get('/noticia/{id}', [SiteController::class, 'viewNotice'])->name('viewNotice_site');
+Route::get('/noticias', [SiteController::class, 'notice'])->name('notice_site');
 
-Route::get('/plataforma-2', [SiteController::class, 'notice_site'])->name('noticies_site');
+Route::get('/pacote/', [SiteController::class, 'pack'])->name('pack_site');
+Route::get('/pacote/{id}', [SiteController::class, 'viewPack'])->name('viewPack_site');
+Route::get('/pacote/{category}/{id}', [SiteController::class, 'packByCategory'])->name('pack-by-category_site');
+
+Route::get('/modulo/{id}', [SiteController::class, 'viewModule'])->name('viewModule_site');
+Route::get('/modulo/', [SiteController::class, 'module'])->name('module_site');
 
 Route::get('/cursos/categoria', [CategoryController::class, 'category'])->middleware(['auth'])->name('category');
 Route::post('/cursos/add-categoria', [CategoryController::class, 'store'])->middleware(['auth'])->name('store-category');
