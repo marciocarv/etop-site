@@ -130,7 +130,7 @@
 						<div class="span12">
 							ETOP Educação &copy; - Todos os direitos reservados <br />
 							etopeducacao@gmail.com <br />
-							Fone: (63) 98483-5962
+							Fone: (63) 99253-6918
 						</div>
 					</div>
 				</div>            
@@ -140,7 +140,7 @@
 	
 	<div class="container">     
 		<div class="webcabecass row">			
-			<a href="https://contate.me/etopeducacao" target="_blank"><img src="{{asset('img/WhatsApp-icone.png')}}" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
+			<a href="https://contate.me/etop" target="_blank"><img src="{{asset('img/WhatsApp-icone.png')}}" style="height:80px; position:fixed; bottom: 25px; right: 25px; z-index:100;" data-selector="img"></a>
 		</div>
 	</div>
 
